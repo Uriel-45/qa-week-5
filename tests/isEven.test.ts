@@ -11,4 +11,14 @@ describe('isEven', () => {
     expect(isEven(3)).toBe(false);
     expect(isEven(-1)).toBe(false);
   });
+
+  it('verifica si números negativos pares son pares', () => {
+    expect(isEven(-2)).toBe(true);
+    expect(isEven(-4)).toBe(true);
+  });
+
+  it('verifica números grandes', () => {
+    expect(isEven(1000000)).toBe(true);
+    expect(isEven(1000001)).toBe(false);
+  });
 });
